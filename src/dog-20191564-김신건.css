@@ -16,6 +16,21 @@ section {
 }
 
 .game-board {
-    background-color: yellowgreen;
+    background-color: #CEFF84;
     height: 500px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: black;
+    background-color: white;
+    margin: 4px;
+}
+
+.game-board > .row {
+    margin-bottom: 8%;
+    margin-top: 8%;
+}
+.game-board > .row > div {
+    margin-left: 2%;
+    margin-right: 2%;
 }

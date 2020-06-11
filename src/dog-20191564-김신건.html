@@ -5,46 +5,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>강아지를 찾아라!</title>
-    <script src="./dog-20191564-김신건.js"></script>
-    <link type="text/css" rel="stylesheet" href="./bootstrap-4.5.0/css/bootstrap.min.css" />
-    <script src="./jquery-migrate-3.3.0.js"></script>
-    <script type="text/javascript" src="./bootstrap-4.5.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./dog-20191564-김신건.css">
-
+    <link type="text/css" rel="stylesheet" href="bootstrap-4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="dog-20191564-김신건.css">
 </head>
 
 <body>
     <header>
         <h2 class="display-2" id="title">
-            숨어있는 강아지 찾기
+            <strong>
+                숨어있는 강아지 찾기
+            </strong>
+
         </h2>
         <hr>
     </header>
     <section class = "container">
         <div class = "row">
-            <nav class = "col-4">
+            <nav class = "col-3">
                 <ul class="nav flex-column nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
+                    <li class="nav-item" onmouseover="mouseup_shadow(this)" onmouseout="mouseout_shadow(this)">
+                        <h4 class="nav-link active" href="#">게임 시작</h4>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
+                    <li class="nav-item" onmouseover="mouseup_shadow(this)" onmouseout="mouseout_shadow(this)">
+                        <h4 class="nav-link active" href="#">남은 수: 8</h4>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
+                    <li class="nav-item" onmouseover="mouseup_shadow(this)" onmouseout="mouseout_shadow(this)">
+                        <h4 class="nav-link active" href="#">실패수: 0</h4>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
+                    <li class="nav-item" onmouseover="mouseup_shadow(this)" onmouseout="mouseout_shadow(this)">
+                        <h4 class="nav-link active" href="#">남은 시간: 0</h4>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
+                    <li class="nav-item" onmouseover="mouseup_shadow(this)" onmouseout="mouseout_shadow(this)">
+                        <h4 class="nav-link active" href="#" id = "game-msg">게임이 진행될 예정입니다.</h4>
                     </li>
                 </ul>
     
             </nav>
     
-            <article class="game-board col-8">
-    
+            <article class="game-board col-9">
+                <div class="row justify-content-md-center">
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                </div>
+
+                <div class="row justify-content-md-center">
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                </div>
+
+                <div class="row justify-content-md-center">
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                    <div class="col-1">
+                        <img src="../media/img1.gif" alt="이미지 없음">
+                    </div>
+                </div>
+
+
+
             </article>
         </div>
 
@@ -52,7 +133,11 @@
     <footer>
 
     </footer>
-
+    
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- <script type="text/javascript" src="jquery-migrate-3.3.0.js"></script> -->
+    <script type="text/javascript" src="bootstrap-4.5.0/js/bootstrap.min.js"></script>
+    <script src="dog-20191564-김신건.js"></script>
 </body>
 
 </html>
