@@ -1,0 +1,21 @@
+body {
+    background-color: green;
+}
+
+header #title{
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    display: inline;
+}
+
+section {
+    width: 100%;
+}
+
+.game-board {
+    background-color: yellowgreen;
+    height: 500px;
+}
