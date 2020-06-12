@@ -7,9 +7,14 @@
     <title>강아지를 찾아라!</title>
     <link type="text/css" rel="stylesheet" href="bootstrap-4.5.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="dog-20191564-김신건.css">
+    
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- <script type="text/javascript" src="./jquery-migrate-3.3.0.js"></script> -->
+    <script type="text/javascript" src="./bootstrap-4.5.0/js/bootstrap.min.js"></script>
+    <script src="./dog-20191564-김신건.js"></script>
 </head>
 
-<body>
+<body onload="init()">
     <header>
         <h2 class="display-2" id="title">
             <strong>
@@ -19,113 +24,58 @@
         </h2>
         <hr>
     </header>
-    <section class = "container">
-        <div class = "row">
-            <nav class = "col-3">
-                <ul class="nav flex-column nav-pills">
-                    <li class="nav-item" onmouseover="mouseup_shadow(this)" onmouseout="mouseout_shadow(this)">
-                        <h4 class="nav-link active" href="#">게임 시작</h4>
+    <section class = "container col-12" >
+        <div class = "row col-12 justify-content-md-center">
+            <nav class = "col-3 vertical-center" style="background-color: antiquewhite;">
+                <ul class="nav flex-column nav-pills ">
+                    <li class="nav-item bg-white rounded row align-items-center" id = "game-start" onmouseover="mouseup_shadow(this)" onmouseout="mouseout_shadow(this)">
+                        <h4 class="col-12">게임 시작</h4>
                     </li>
-                    <li class="nav-item" onmouseover="mouseup_shadow(this)" onmouseout="mouseout_shadow(this)">
-                        <h4 class="nav-link active" href="#">남은 수: 8</h4>
+                    <li class="nav-item bg-white rounded row align-items-center">
+                        <h4 class="col-8" style="display: inline-block;">남은 수: </h4>
+                        <div class="col-4" id = "left-dog-count">
+                            <select name="col-12 left-dog-select" id="left-dog-select">
+                                <script>
+                                    for(var i = 1; i < 8; i++) {
+                                        document.write("<option value='" + i + "'>" + i +"</option>");
+                                    }
+                                </script>
+                            </select>
+                        </div>
                     </li>
-                    <li class="nav-item" onmouseover="mouseup_shadow(this)" onmouseout="mouseout_shadow(this)">
-                        <h4 class="nav-link active" href="#">실패수: 0</h4>
+                    <li class="nav-item bg-white rounded row align-items-center" >
+                        <h4 class="col-8" id = "left-time-label" style="display: inline-block;">게임 시간: </h4>
+                        <div class = "col-4" style="display:inline-block" id = "left-time-count">
+                            <input type="text" name="" id="left-time" style="width: 100%;">
+                        </div>
                     </li>
-                    <li class="nav-item" onmouseover="mouseup_shadow(this)" onmouseout="mouseout_shadow(this)">
-                        <h4 class="nav-link active" href="#">남은 시간: 0</h4>
+
+                    <li class="nav-item bg-white rounded row align-items-center" >
+                        <h4 class="col-8" style="display: inline-block;">실패수: </h4>
+                        <h4 class="col-4">0</h4>
                     </li>
-                    <li class="nav-item" onmouseover="mouseup_shadow(this)" onmouseout="mouseout_shadow(this)">
-                        <h4 class="nav-link active" href="#" id = "game-msg">게임이 진행될 예정입니다.</h4>
+
+                    <li class="nav-item bg-white rounded row align-items-center">
+                        <h4 class = "col-12" id = "game-msg">게임이 진행될 예정입니다.</h4>
                     </li>
                 </ul>
     
             </nav>
-    
-            <article class="game-board col-9">
-                <div class="row justify-content-md-center">
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                </div>
+            <div class="col-1">
 
-                <div class="row justify-content-md-center">
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                </div>
-
-                <div class="row justify-content-md-center">
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                    <div class="col-1">
-                        <img src="../media/img1.gif" alt="이미지 없음">
-                    </div>
-                </div>
-
-
-
+            </div>
+            <article class="game-board col-8">
+                <script>
+                    for(var i = 0; i <3; i++) {
+                        document.write('<div class="row justify-content-md-center">');
+                        for(var j = 0; j <8; j++) {
+                            document.write('<div class="col-1">');
+                            document.write('<img class = "egg" src="../media/img3.gif" alt="이미지 없음" id = "egg-'+i*8+j+'">');
+                            document.write('</div>');
+                        }
+                        document.write('</div>');
+                    }
+                </script>
             </article>
         </div>
 
@@ -134,10 +84,6 @@
 
     </footer>
     
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <!-- <script type="text/javascript" src="jquery-migrate-3.3.0.js"></script> -->
-    <script type="text/javascript" src="bootstrap-4.5.0/js/bootstrap.min.js"></script>
-    <script src="dog-20191564-김신건.js"></script>
 </body>
 
 </html>
