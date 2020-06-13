@@ -12,6 +12,7 @@ var backGroundMusic;
 var clockSound;
 var successSound;
 var tadaSound;
+var gameStartSound;
 
 function init() {
     // 전역변수 초기화
@@ -79,6 +80,7 @@ function mediaInit() {
     clockSound = new Audio("../media/clock.mp3");
     successSound = new Audio("../media/ending.mp3");
     tadaSound = new Audio("../media/tada.mp3");
+    gameStartSound = new Audio("../media/gamestart.mp3");
 }
 
 // 사용자가 빠르게 누르면, 하나의 객체로 정의되었을 경우에는 사운드가 들리지 않을 수 있음.
@@ -200,7 +202,7 @@ function showTime() {
 function findDog() {
 
     setGameMsg("정답을 찾으세요.");
-    
+    gameStartSound.play();
     isStarted = true;
     $("#left-time-count").html('<h4 class = "col-4" id = "left-time-count">' + leftGameTime + '</h4>');
     
