@@ -129,8 +129,8 @@ function gameStart() {
     leftGameTime = $("#left-time").val();
     
     // 사용자가 입력한 게임 시간이 올바르지 않다면, 게임을 시작하지 않는다.
-    if(leftGameTime == " " || isNaN(leftGameTime) || leftGameTime >= 20 || leftGameTime <= 0) {
-        alert("게임 시간은 1 ~ 19 까지의 숫자만 입력해주세요.");
+    if(leftGameTime == " " || isNaN(leftGameTime) || leftGameTime >= 30 || leftGameTime <= 0) {
+        alert("게임 시간은 1 ~ 29 까지의 숫자만 입력해주세요.");
         return false;
     }
 
@@ -208,7 +208,7 @@ function findDog() {
     
     gameTimer = setInterval(function() {
         clockSound.play();
-        
+        leftGameTime-=1;
         $("#left-time-count").html('<h4 class = "col-4" id = "left-time-count">' + leftGameTime + '</h4>');
         if(leftGameTime <= 0 && !isfound) {
             failGame();
