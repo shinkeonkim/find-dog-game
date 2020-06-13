@@ -96,20 +96,20 @@ function eventInit() {
     // https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
     // 크롬의 autoplay 정책 변경으로 크롬에서는 사용자에게 클릭 등의 이벤트가 일어나야 노래가 재생되게 바뀌었음.
     // 이에 따라 추가한 이벤트                
-    // $("#music-button").click(function (e) { 
-    //     backGroundMusic.play();
-    //     $(this).hide();
-    // });
+    $("#music-button").click(function (e) { 
+        backGroundMusic.play();
+        $(this).hide();
+    });
 }
 
 
 function mediaInit() {
 
-    // backGroundMusic = new Audio();
-    // backGroundMusic.src = "../media/background.mp3";
-    // backGroundMusic.loop = true;
-    // backGroundMusic.volume = 0.5;
-    // backGroundMusic.play();
+    backGroundMusic = new Audio();
+    backGroundMusic.src = "../media/background.mp3";
+    backGroundMusic.loop = true;
+    backGroundMusic.volume = 0.5;
+    backGroundMusic.play();
     
     clockSound = new Audio("../media/clock.mp3");
     successSound = new Audio("../media/ending.mp3");
