@@ -56,3 +56,13 @@ section,li {
 .border-gray {
     border: 1px solid gray;
 }
+
+#fail-msg {
+    position: absolute;
+    color: rgb(172, 0, 0);
+    font-size: 5em;
+    font-weight: bold;
+    left:25%;
+    top: 40%;
+    visibility: hidden;
+}
