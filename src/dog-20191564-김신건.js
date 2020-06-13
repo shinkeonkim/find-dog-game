@@ -14,6 +14,10 @@ var successSound;
 var tadaSound;
 var gameStartSound;
 
+$(document).ready(function () {
+    init();
+});
+
 function init() {
 
     boardHtml = "";
