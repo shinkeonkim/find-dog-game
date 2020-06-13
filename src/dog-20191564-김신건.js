@@ -20,6 +20,16 @@ $(document).ready(function () {
 
 function init() {
 
+    htmlJsInit();
+
+    // 전역변수 초기화
+    varInit();
+    // 이벤트리스너 초기화
+    eventInit();
+
+    mediaInit();
+}
+function htmlJsInit() {
     boardHtml = "";
     for(var i = 0; i <3; i++) {
         boardHtml += '<div class="row justify-content-md-center rounded bg-transparent">';
@@ -40,13 +50,6 @@ function init() {
     }
 
     $("#left-dog-select").html(optionHtml);
-
-    // 전역변수 초기화
-    varInit();
-    // 이벤트리스너 초기화
-    eventInit();
-
-    mediaInit();
 }
 
 function varInit() {
@@ -60,7 +63,7 @@ function varInit() {
 }
 
 function eventInit() {
-    $("#game-start").click(function (e) {
+    $("#game-start").click(function () {
         if(gameStart()) {
             $(this).hide();
         }
@@ -153,10 +156,15 @@ function getRandomNumbers(arr) {
 function gameStart() {
     
     // 사용자가 입력한 `남은 시간 수` 저장
-    leftGameTime = $("#left-time").val();
+    if($("#left-time").val()!= undefined) {
+        leftGameTime = $("#left-time").val();
+    }
+    else {
+        return false;
+    }
     
     // 사용자가 입력한 게임 시간이 올바르지 않다면, 게임을 시작하지 않는다.
-    if(leftGameTime == " " || isNaN(leftGameTime) || leftGameTime >= 30 || leftGameTime <= 0) {
+    if(leftGameTime == "" || leftGameTime == null || isNaN(leftGameTime) || leftGameTime >= 30 || leftGameTime <= 0) {
         alert("게임 시간은 1 ~ 29 까지의 숫자만 입력해주세요.");
         return false;
     }
@@ -202,6 +210,7 @@ function showFailDog() {
 function hideDog() {
     for(var i = 0; i < leftDog; i++) {
         $("#egg-" + dogNumberList[i]).attr("src", "../media/img3.gif");
+        $("#egg-" + dogNumberList[i]).css("");
     }
 }
 
@@ -234,7 +243,6 @@ function findDog() {
     $("#left-time-count").html('<h4 class = "col-4" id = "left-time-count">' + leftGameTime + '</h4>');
     
     gameTimer = setInterval(function() {
-        clockSound.play();
         leftGameTime-=1;
         $("#left-time-count").html('<h4 class = "col-4" id = "left-time-count">' + leftGameTime + '</h4>');
         if(leftGameTime <= 0 && !isfound) {
@@ -267,10 +275,12 @@ function dogClicked(obj) {
 
     if(leftDog <=0) {
         successGame();
+        return;
     }
 
     if(failCount >5) {
         failGame();
+        return;
     }
 
 }
@@ -280,7 +290,7 @@ function successGame() {
     successSound.play();
     tadaSound.play();
     clearInterval(gameTimer);
-    iffound = true;
+    isfound = true;
     setTimeout(regame, 1500);
 }
 
@@ -295,8 +305,22 @@ function failGame() {
 
 function regame() {
     clearTimeout(regame);
-    if(confirm("다시 시작하시겠습니까?")) {
-        location.reload();
+    
+    if(confirm("게임을 다시 시작하시겠습니까?")) {
+        // 게임 시간: -> 남은 시간: 으로 텍스트 변경    
+        $("#left-time-label").text("게임 시간: ");
+        $("#fail-count").text(0);
+        hideDog();
+        varInit();
+        $("#left-time-count").html('<input type="text" id="left-time" style="width: 100%;">');
+        $("#left-dog-count").html('<select class="col-12 left-dog-select" id="left-dog-select"></select>');    
+        $("#fail-msg").css("visibility", "hidden");
+        setGameMsg("게임이 진행될 예정입니다.");
+
+        htmlJsInit();
+        eventInit();
+        
+        $("#game-start").show();
     }
 }
 
