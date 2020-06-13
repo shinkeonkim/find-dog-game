@@ -75,6 +75,7 @@ function mediaInit() {
     backGroundMusic = new Audio();
     backGroundMusic.src = "../media/background.mp3";
     backGroundMusic.loop = true;
+    backGroundMusic.volume = 0.5;
     backGroundMusic.play();
 
     clockSound = new Audio("../media/clock.mp3");
