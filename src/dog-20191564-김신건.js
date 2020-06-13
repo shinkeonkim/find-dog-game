@@ -5,6 +5,7 @@ var leftShowTime = 10;
 var showTimer;
 var dogNumberList;
 var isStarted = false;
+var isEnded = false;
 var isfound = false;
 var failCount = 0;
 
@@ -14,14 +15,16 @@ var successSound;
 var tadaSound;
 var gameStartSound;
 
+window.onload = function() {
+    var context = new AudioContext();
+}
+
 $(document).ready(function () {
     init();
 });
 
 function init() {
-
     htmlJsInit();
-
     // 전역변수 초기화
     varInit();
     // 이벤트리스너 초기화
@@ -59,6 +62,7 @@ function varInit() {
     dogNumberList = [];
     isStarted = false;
     isfound = false;
+    isEnded = false;
     failCount = 0;
 }
 
@@ -106,7 +110,7 @@ function mediaInit() {
     backGroundMusic.loop = true;
     backGroundMusic.volume = 0.5;
     backGroundMusic.play();
-
+    
     clockSound = new Audio("../media/clock.mp3");
     successSound = new Audio("../media/ending.mp3");
     tadaSound = new Audio("../media/tada.mp3");
@@ -252,7 +256,7 @@ function findDog() {
 }
 
 function dogClicked(obj) {
-    if(isStarted) {
+    if(isStarted && !isEnded) {
         var clickedDogNumber = $(obj).attr("id").substr(4,$(obj).attr("id").length - 4);
         var ret = dogNumberList.indexOf(1*clickedDogNumber);
         if(ret < 0) {
@@ -269,11 +273,10 @@ function dogClicked(obj) {
         }
     }
     else {
-        alert("게임 시작 후, 개를 찾아주세요!");
         return;
     }
 
-    if(leftDog <=0) {
+    if(leftDog <=0) {   
         successGame();
         return;
     }
@@ -286,20 +289,26 @@ function dogClicked(obj) {
 }
 
 function successGame() {
-    setGameMsg("성공하셨습니다!");
-    successSound.play();
-    tadaSound.play();
-    clearInterval(gameTimer);
-    isfound = true;
-    setTimeout(regame, 1500);
+    if(!isEnded) {
+        setGameMsg("성공하셨습니다!");
+        successSound.play();
+        tadaSound.play();
+        clearInterval(gameTimer);
+        isfound = true;
+        setTimeout(regame, 2000);
+        isEnded = true;
+    }
 }
 
 function failGame() {
-    clearInterval(gameTimer);
-    setGameMsg("실패");
-    showFailDog();
-    $("#fail-msg").css("visibility", "visible");
-    setTimeout(regame, 1500);
+    if(!isEnded) {
+        clearInterval(gameTimer);
+        setGameMsg("실패");
+        showFailDog();
+        $("#fail-msg").css("visibility", "visible");
+        setTimeout(regame, 2000);
+        isEnded = true;
+    }
 }
 
 
@@ -307,7 +316,7 @@ function regame() {
     clearTimeout(regame);
     
     if(confirm("게임을 다시 시작하시겠습니까?")) {
-        // 게임 시간: -> 남은 시간: 으로 텍스트 변경    
+        // 게임 시간: -> 남은 시간: 으로 텍스트 변경     
         $("#left-time-label").text("게임 시간: ");
         $("#fail-count").text(0);
         hideDog();
