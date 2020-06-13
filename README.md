@@ -14,6 +14,10 @@
 
 강아지가 숨어있는 계란을 클릭하고, 모든 강아지를 찾으세요!
 
+> 아래 링크에서 실행해볼 수 있습니다!
+
+<a href = "http://likelion.singun11.wtf:100/find-dog-game/src/dog-20191564-%EA%B9%80%EC%8B%A0%EA%B1%B4.html"> 링크 </a>
+
 ```
 국민대학교  웹클라이언트 컴퓨팅 강의 기말과제로, 
 
@@ -43,6 +47,26 @@ git clone https://github.com/shinkeonkim/find-dog-game.git
 
 ## Usage Example
 
+### 메인 화면
+
+<img src = "img/main-screen.png"> 
+
+### 위치를 외우는 시간 화면
+
+<img src = "img/memorize-time.png"> 
+
+
+### 게임 실행 화면
+
+<img src = "img/answer-time.png"> 
+
+### 게임 실패 화면
+
+<img src = "img/game-over.png"> 
+
+### 게임 성공 화면
+
+<img src = "img/success.png"> 
 
 ## Reference
 
