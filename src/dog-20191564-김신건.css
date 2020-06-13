@@ -42,11 +42,11 @@ section,li {
     padding: 2px;
 }
 
-.game-board > .row {
+.game-board .row {
     margin-bottom: 4%;
     margin-top: 4%;
 }
-.game-board > .row > div {
+.game-board .row > div {
     margin-left: 2%;
     margin-right: 2%;
 }

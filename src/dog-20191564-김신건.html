@@ -35,11 +35,6 @@
                         <h4 class="col-8" style="display: inline-block;">남은 수: </h4>
                         <div class="col-4" id = "left-dog-count">
                             <select name="col-12 left-dog-select" id="left-dog-select">
-                                <script>
-                                    for(var i = 1; i < 8; i++) {
-                                        document.write("<option value='" + i + "'>" + i +"</option>");
-                                    }
-                                </script>
                             </select>
                         </div>
                     </li>
@@ -72,18 +67,8 @@
 
             </div>
             <article class="game-board col-8 rounded">
-                <script>
-                    for(var i = 0; i <3; i++) {
-                        document.write('<div class="row justify-content-md-center rounded bg-transparent">');
-                        for(var j = 0; j <8; j++) {
-                            document.write('<div class="col-1">');
-                            document.write('<img class = "egg" src="../media/img3.gif" alt="이미지 없음" id = "egg-'+(i*8+j)+'">');
-                            document.write('</div>');
-                        }
-                        document.write('</div>');
-                    }
-                </script>
-
+                <div id = "board">
+                </div>
                 <div id = "fail-msg">
                     GAME OVER
                 </div>

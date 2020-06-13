@@ -15,6 +15,28 @@ var tadaSound;
 var gameStartSound;
 
 function init() {
+
+    boardHtml = "";
+    for(var i = 0; i <3; i++) {
+        boardHtml += '<div class="row justify-content-md-center rounded bg-transparent">';
+        for(var j = 0; j <8; j++) {
+            boardHtml +='<div class="col-1">';
+            boardHtml +='<img class = "egg" src="../media/img3.gif" alt="이미지 없음" id = "egg-'+(i*8+j)+'">';
+            boardHtml +='</div>';
+        }
+        boardHtml +='</div>';
+    }
+
+    $("#board").html(boardHtml);
+
+    
+    optionHtml = "";
+    for(var i = 1; i < 8; i++) {
+        optionHtml+="<option value='" + i + "'>" + i +"</option>";
+    }
+
+    $("#left-dog-select").html(optionHtml);
+
     // 전역변수 초기화
     varInit();
     // 이벤트리스너 초기화
@@ -236,6 +258,7 @@ function dogClicked(obj) {
     }
     else {
         alert("게임 시작 후, 개를 찾아주세요!");
+        return;
     }
 
     if(leftDog <=0) {
