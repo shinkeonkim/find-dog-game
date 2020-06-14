@@ -47,24 +47,24 @@
 
 ### 메인 화면 :computer:
 
-<img src = "img/main-screen.png" style = "width: 60%;"> 
+<img src = "img/main-screen.png" width= "60%"> 
 
 ### 위치를 외우는 시간 화면 :floppy_disk:
 
-<img src = "img/memorize-time.png" style = "width: 60%;"> 
+<img src = "img/memorize-time.png" width= "60%"> 
 
 
 ### 게임 실행 화면 :joystick:
 
-<img src = "img/answer-time.png" style = "width: 60%;"> 
+<img src = "img/answer-time.png" width= "60%"> 
 
 ### 게임 실패 화면 :fire: :fire:
 
-<img src = "img/game-over.png" style = "width: 60%;"> 
+<img src = "img/game-over.png" width= "60%"> 
 
 ### 게임 성공 화면 :tada::tada:
 
-<img src = "img/success.png" style = "width: 60%;"> 
+<img src = "img/success.png" width= "60%"> 
 
 ## Reference
 
