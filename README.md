@@ -1,11 +1,3 @@
-<head>
-    <style>
-        img {
-            width: 60%;
-        }
-    </style>
-</head>
-
 # find-dog-game :dog:
 
 > html, css, js로 작성된 간단한 :dog: 찾기 게임입니다.
@@ -55,24 +47,24 @@
 
 ### 메인 화면 :computer:
 
-<img src = "img/main-screen.png"> 
+<img src = "img/main-screen.png" style = "width: 60%;"> 
 
 ### 위치를 외우는 시간 화면 :floppy_disk:
 
-<img src = "img/memorize-time.png"> 
+<img src = "img/memorize-time.png" style = "width: 60%;"> 
 
 
 ### 게임 실행 화면 :joystick:
 
-<img src = "img/answer-time.png"> 
+<img src = "img/answer-time.png" style = "width: 60%;"> 
 
 ### 게임 실패 화면 :fire: :fire:
 
-<img src = "img/game-over.png"> 
+<img src = "img/game-over.png" style = "width: 60%;"> 
 
 ### 게임 성공 화면 :tada::tada:
 
-<img src = "img/success.png"> 
+<img src = "img/success.png" style = "width: 60%;"> 
 
 ## Reference
 
