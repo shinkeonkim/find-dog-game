@@ -1,3 +1,11 @@
+<head>
+    <style>
+        img {
+            width: 60%;
+        }
+    </style>
+</head>
+
 # find-dog-game :dog:
 
 > html, css, js로 작성된 간단한 :dog: 찾기 게임입니다.
