@@ -64,7 +64,7 @@
 
 ### :tada: 게임 성공 화면 :tada:
 
-<img src = "img/dog-20191564-김신건-캡쳐-1.png" width= "60%"> 
+<img src = "img/dog-20191564-김신건-캡쳐-5.png" width= "60%"> 
 
 ## Reference
 
