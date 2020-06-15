@@ -47,24 +47,24 @@
 
 ### 메인 화면 :computer:
 
-<img src = "img/main-screen.png" width= "60%"> 
+<img src = "img/dog-20191564-김신건-캡쳐-1.png" width= "60%"> 
 
 ### 위치를 외우는 시간 화면 :floppy_disk:
 
-<img src = "img/memorize-time.png" width= "60%"> 
+<img src = "img/dog-20191564-김신건-캡쳐-2.png" width= "60%"> 
 
 
 ### 게임 실행 화면 :joystick:
 
-<img src = "img/answer-time.png" width= "60%"> 
+<img src = "img/dog-20191564-김신건-캡쳐-3.png" width= "60%"> 
 
-### 게임 실패 화면 :fire: :fire:
+### :fire: 게임 실패 화면 :fire: 
 
-<img src = "img/game-over.png" width= "60%"> 
+<img src = "img/dog-20191564-김신건-캡쳐-4.png" width= "60%"> 
 
-### 게임 성공 화면 :tada::tada:
+### :tada: 게임 성공 화면 :tada:
 
-<img src = "img/success.png" width= "60%"> 
+<img src = "img/dog-20191564-김신건-캡쳐-1.png" width= "60%"> 
 
 ## Reference
 
