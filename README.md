@@ -16,7 +16,7 @@
 
 > 아래 링크에서 실행해볼 수 있습니다!
 
-<a href = "http://likelion.singun11.wtf:100/find-dog-game/src/dog-20191564-%EA%B9%80%EC%8B%A0%EA%B1%B4.html"> 실행 링크 </a>
+<a href = "https://shinkeonkim.github.io/find-dog-game/src/dog-20191564-%EA%B9%80%EC%8B%A0%EA%B1%B4.html"> 실행 링크 </a>
 
 
 ## Description :exclamation:
